@@ -8,8 +8,6 @@ def bubble_sort (lista):
                 lista[i+1]=temp
     return lista
 
-if __name__ == "__main__":
-    l=list(range(10,0,-1))
 
     lo= bubble_sort(l)
 
@@ -17,4 +15,8 @@ if __name__ == "__main__":
     
         
 
+if __name__ == '__main__':
+    i=list(range(10,0,-1))
+    io=bubble_sort(i)
+    print(io)  
     
