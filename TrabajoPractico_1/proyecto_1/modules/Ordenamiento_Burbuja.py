@@ -11,13 +11,10 @@ def bubble_sort (lista):
 if __name__ == "__main__":
     l=list(range(10,0,-1))
 
-<<<<<<< HEAD
     lo= bubble_sort(l)
 
     print(lo)
     
-=======
         
 
->>>>>>> 0cb716db67cf42d17103aa181ab162d05276693b
     
