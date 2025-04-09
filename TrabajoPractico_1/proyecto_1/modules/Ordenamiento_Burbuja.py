@@ -6,7 +6,13 @@ def bubble_sort (lista):
                 temp= lista[i]
                 lista[i]=lista[i+1]
                 lista[i+1]=temp
+    return lista
 
+if __name__ == "__main__":
+    l=list(range(10,0,-1))
 
+    lo= bubble_sort(l)
+
+    print(lo)
     
     
