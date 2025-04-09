@@ -1,6 +1,7 @@
 #Ordenamiento Quicksort
 def quick_sort (lista):
     quick_sort_helper(lista,0,len(lista)-1)
+    return lista
 
 def quick_sort_helper(lista,primero,ultimo):
     if primero<ultimo:
@@ -23,5 +24,12 @@ def particion(lista,primero,ultimo):
             temp=lista[izquierda]
             lista[izquierda]=lista[derecha]
             lista[derecha]=temp
-        return derecha
-        
+    lista[primero], lista[derecha] = lista[derecha], lista[primero]        
+    return derecha
+if __name__ == "__main__":
+    l=list(range(10,0,-1))
+
+    lo= quick_sort(l)
+
+    print(lo)        
+    
