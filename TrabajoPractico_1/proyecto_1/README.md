@@ -1,4 +1,4 @@
-# 🐍Nombre del proyecto (darle un nombre significativo) 
+# 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
 Breve descripción del proyecto:
 
@@ -36,8 +36,9 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 ---
 ## 🙎‍♀️🙎‍♂️Autores
 
-- Apellido y Nombre del primer integrante
-- Apellido y Nombre del primer integrante
+- Morales Spinelli, Agustin
+- Moreira Yanz, Cristina
+- Zampedri, Matias Nicolas
 
 ---
 

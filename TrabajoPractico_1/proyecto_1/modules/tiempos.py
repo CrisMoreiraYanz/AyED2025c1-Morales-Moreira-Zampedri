@@ -1,5 +1,8 @@
 from random import randint
 import time
+from modules.Ordenamiento_Burbuja import bubble_sort
+from modules.Ordenamiento_Quicksort import quick_sort
+from modules.Ordenamiento_por_Residuos import ordenar_por_residuos
 
 def medir_tiempos(metodo_ord, tamanos):
     tiempos_ord_selecc = []
@@ -19,6 +22,14 @@ def medir_tiempos(metodo_ord, tamanos):
     
     return tiempos_ord_selecc
 
+# if __name__ == '__main__':
+#     tamanos = [1, 10, 100, 200, 500, 700, 1000]
+#     medir_tiempos(bubble_sort, tamanos)
+
+# if __name__ == '__main__':
+#     tamanos = [1, 10, 100, 200, 500, 700, 1000]
+#     medir_tiempos(quick_sort, tamanos)
+
 if __name__ == '__main__':
     tamanos = [1, 10, 100, 200, 500, 700, 1000]
-    medir_tiempos(tamanos)
+    medir_tiempos(ordenar_por_residuos, tamanos)
