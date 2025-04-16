@@ -22,14 +22,14 @@ def medir_tiempos(metodo_ord, tamanos):
     
     return tiempos_ord_selecc
 
-# if __name__ == '__main__':
-#     tamanos = [1, 10, 100, 200, 500, 700, 1000]
-#     medir_tiempos(bubble_sort, tamanos)
+if __name__ == '__main__':
+    tamanos = [1, 10, 100, 200, 500, 700, 1000]
+    medir_tiempos(bubble_sort, tamanos)
 
 # if __name__ == '__main__':
 #     tamanos = [1, 10, 100, 200, 500, 700, 1000]
 #     medir_tiempos(quick_sort, tamanos)
 
-if __name__ == '__main__':
-    tamanos = [1, 10, 100, 200, 500, 700, 1000]
-    medir_tiempos(ordenar_por_residuos, tamanos)
+# if __name__ == '__main__':
+#     tamanos = [1, 10, 100, 200, 500, 700, 1000]
+#     medir_tiempos(ordenar_por_residuos, tamanos)
