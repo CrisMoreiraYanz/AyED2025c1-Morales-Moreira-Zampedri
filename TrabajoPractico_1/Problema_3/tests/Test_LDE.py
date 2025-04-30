@@ -1,4 +1,4 @@
-from modulos.ListaDobleEnlazada import ListaDobleEnlazada
+from modulos import ListaDobleEnlazada
 import unittest
 import random
 
@@ -351,13 +351,12 @@ class Test_LDE(unittest.TestCase):
 
         # Recorro de adelante para atras
         nodo = lista.cabeza
-        #print("aca esta el nodo anterios", nodo.anterior)
         counter = 0
         elementos = []
-        
+
         self.assertIsNone(nodo.anterior,
                           "El elemento anterior a la cabeza de la lista debe ser None")
-        
+
         while nodo is not None:
             counter += 1
             elementos.append(nodo.dato)

@@ -65,6 +65,8 @@ class ListaDobleEnlazada:
             raise Exception("No se puede extraer de una lista vacía")
         if posicion is None:
             posicion = self.tamanio - 1
+        if posicion < 0:  
+            posicion += self.tamanio
         if posicion < 0 or posicion >= self.tamanio:
             raise Exception("Posición inválida")
         if posicion == 0:
@@ -116,6 +118,7 @@ class ListaDobleEnlazada:
             self.cola.siguiente = otra_lista.cabeza
             otra_lista.cabeza.anterior = self.cola
             self.cola = otra_lista.cola
+        self.cabeza.anterior = None
         self.tamanio += len(otra_lista)
 
     def __add__(self, otra_lista):
