@@ -104,14 +104,14 @@ class ListaDobleEnlazada:
     def invertir(self):
         nodo_actual = self.cabeza
         self.cabeza, self.cola = self.cola, self.cabeza
-        while nodo_actual:
+        while nodo_actual is not None:
             nodo_actual.siguiente, nodo_actual.anterior = nodo_actual.anterior, nodo_actual.siguiente
             nodo_actual = nodo_actual.anterior
 
     def concatenar(self, otra_lista):
         if otra_lista.esta_vacia():
             return
-        if self.esta_vacia():
+        if self.esta_vacia():   
             self.cabeza = otra_lista.cabeza
             self.cola = otra_lista.cola
         else:
