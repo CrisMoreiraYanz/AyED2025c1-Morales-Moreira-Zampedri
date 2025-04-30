@@ -2,7 +2,7 @@
 
 Breve descripción del proyecto:
 
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
 
 ---
 ## 🏗Arquitectura General
