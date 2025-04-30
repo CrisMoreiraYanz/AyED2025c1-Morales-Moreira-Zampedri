@@ -1,3 +1,4 @@
+#módulo para medir el tiempo de ordenamiento de los métodos
 from random import randint
 import time
 from modules.Ordenamiento_Burbuja import bubble_sort

@@ -1,3 +1,4 @@
+#módulo para graficar los tiempos de odenamiento de los métodos y sorted
 from matplotlib import pyplot as plt
 from modules.tiempos import medir_tiempos
 from modules.Ordenamiento_Burbuja import bubble_sort

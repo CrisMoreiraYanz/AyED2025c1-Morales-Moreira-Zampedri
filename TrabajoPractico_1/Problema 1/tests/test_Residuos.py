@@ -1,3 +1,4 @@
+#test para el algoritmo de ordenamiento por reiduos
 import unittest
 from random import randint
 from modules.Ordenamiento_por_Residuos import ordenar_por_residuos

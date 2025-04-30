@@ -1,9 +1,3 @@
-# 🗄️ Resultados
-
-En esta carpeta se guardan todos los archivos, ya sean de texto, csv, JSON, etc. de los cuales se obtuvieron datos para realizar el proyecto. También se guardan los archivos que contengan los resultados del proyecto o que sirvan para almacenar información.
-
----
-
 ## Resultados obtenidos
 
 ### 1. Tiempos de ejecución de los algoritmos de ordenamiento
@@ -47,7 +41,4 @@ para listas de diferentes tamaños. Los resultados obtenidos son los siguientes:
 - **Bubble Sort**: Es el algoritmo más lento, especialmente para listas grandes, debido a su complejidad de tiempo O(n²).
 - **Quicksort**: Es significativamente más rápido que Bubble Sort, con una complejidad promedio de O(n log n).
 - **Ordenamiento por Residuos**: Tiene una complejidad promedio de O(n log n), pero depende de las características de los datos.
-
-
-
 ---

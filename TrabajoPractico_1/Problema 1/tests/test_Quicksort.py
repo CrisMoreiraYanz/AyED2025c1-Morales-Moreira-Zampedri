@@ -1,3 +1,4 @@
+#test para el algoritmo de ordenamiento quicksort
 import unittest
 from random import randint
 from modules.Ordenamiento_Quicksort import quick_sort
