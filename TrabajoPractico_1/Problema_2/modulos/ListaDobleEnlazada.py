@@ -107,19 +107,19 @@ class ListaDobleEnlazada:
         while nodo_actual is not None:
             nodo_actual.siguiente, nodo_actual.anterior = nodo_actual.anterior, nodo_actual.siguiente
             nodo_actual = nodo_actual.anterior
-
+        return self
+    
     def concatenar(self, otra_lista):
         if otra_lista.esta_vacia():
-            return
+            return self
         if self.esta_vacia():   
-            self.cabeza = otra_lista.cabeza
-            self.cola = otra_lista.cola
+            return otra_lista
         else:
             self.cola.siguiente = otra_lista.cabeza
             otra_lista.cabeza.anterior = self.cola
             self.cola = otra_lista.cola
-        self.cabeza.anterior = None
-        self.tamanio += len(otra_lista)
+            self.tamanio += len(otra_lista)
+            return self
 
     def __add__(self, otra_lista):
         nueva_lista = self.copiar()
@@ -131,3 +131,29 @@ class ListaDobleEnlazada:
         while nodo_actual:
             yield nodo_actual.dato
             nodo_actual = nodo_actual.siguiente
+
+    def __str__(self):
+        """Devuelve una representación en cadena de la lista."""
+        elementos = []
+        nodo_actual = self.cabeza
+        while nodo_actual:
+            elementos.append(str(nodo_actual.dato))
+            nodo_actual = nodo_actual.siguiente
+        return " <-> ".join(elementos)
+    
+if __name__ == "__main__":
+    lista1=ListaDobleEnlazada()
+    lista2=ListaDobleEnlazada()
+    for i in range(10):
+        lista1.agregar_al_final(i)
+        lista2.agregar_al_final(i+10)
+        
+    # for i in lista1:
+    #     print(i, end=" ")
+    lista3=ListaDobleEnlazada()
+    lista3=lista1.concatenar(lista2)
+    print("tamaño lista", len(lista3))
+    for i in lista3:
+        print(i, end=" ")
+    # print(lista1.invertir())
+    
