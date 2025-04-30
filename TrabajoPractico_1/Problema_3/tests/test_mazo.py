@@ -8,7 +8,7 @@ class TestMazo(unittest.TestCase):
     def setUp(self):
         self.mazo= Mazo()
 
-    def test_poner_sacar_arriba(self):            #Poner arriba al momento de repartir las cartas, sacar arriba al momento de jugar el turno
+    def test_poner_sacar_arriba(self):                       #Poner arriba al momento de repartir las cartas, sacar arriba al momento de jugar el turno
         carta1=Carta('5','trebol')
         carta2=Carta('3','corazones')
 
