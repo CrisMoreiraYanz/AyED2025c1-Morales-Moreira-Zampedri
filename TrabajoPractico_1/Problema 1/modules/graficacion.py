@@ -13,11 +13,16 @@ def graficar_tiempos(lista_metodos_ord):
     for metodo_ord in lista_metodos_ord:
         
         tiempos = medir_tiempos(metodo_ord, tamanos)
+        # controlo si el método es 'sorted'
+        if metodo_ord == sorted:
+            nombre = 'sorted'
+        else:
+            nombre = metodo_ord.__name__
 
         # plot es para graficar los tiempos de ordenamiento
         # plot es el método de matplotlib para graficar
         # marker='o' es para poner un punto en cada coordenada
-        plt.plot(tamanos, tiempos, marker='o', label=metodo_ord.__name__)
+        plt.plot(tamanos, tiempos, marker='o', label=nombre)
 
     plt.xlabel('Tamaño de la lista')
     plt.ylabel('Tiempo (segundos)')
@@ -28,6 +33,6 @@ def graficar_tiempos(lista_metodos_ord):
 
 
 if __name__ == '__main__':
-    lista_metodos_ord = [bubble_sort, quick_sort, ordenar_por_residuos]
+    lista_metodos_ord = [bubble_sort, quick_sort, ordenar_por_residuos, sorted]
     graficar_tiempos(lista_metodos_ord)
     # graficar_tiempos([bubble_sort, quick_sort, ordenar_por_residuos])
