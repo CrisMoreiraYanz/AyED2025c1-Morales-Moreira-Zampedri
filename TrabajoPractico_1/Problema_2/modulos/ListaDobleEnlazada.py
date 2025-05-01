@@ -111,31 +111,17 @@ class ListaDobleEnlazada:
             nodo_actual = nodo_actual.anterior
         return self
     
-    # def concatenar(self, otra_lista):
-    #     if otra_lista.esta_vacia(): 
-    #         return self
-    #     if self.esta_vacia():
-    #         self.cabeza=otra_lista.cabeza
-    #         self.cola=otra_lista.cola 
-    #         if self.cabeza:
-    #             self.cabeza.anterior=None  
-    #         self.tamanio=len(otra_lista)
-    #         return self
-    #     else:
-    #         self.cola.siguiente = otra_lista.cabeza
-    #         otra_lista.cabeza.anterior = self.cola
-    #         self.cola = otra_lista.cola
-    #         self.tamanio += len(otra_lista)
-    #         return self
-
     def concatenar(self, otra_lista):
-        if otra_lista.esta_vacia():
+        if otra_lista.esta_vacia(): 
             return self
-        nodo_actual =otra_lista.cabeza
-        while nodo_actual:
-            self.agregar_al_final(nodo_actual.dato)
-            nodo_actual = nodo_actual.siguiente
-        return self
+        if self.esta_vacia():
+            return otra_lista
+        else:
+            self.cola.siguiente = otra_lista.cabeza
+            # otra_lista.cabeza.anterior = self.cola
+            self.cola = otra_lista.cola
+            self.tamanio += len(otra_lista)
+            return self
 
     def __add__(self, otra_lista):
         nueva_lista = self.copiar()
