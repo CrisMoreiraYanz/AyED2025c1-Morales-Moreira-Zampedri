@@ -1,15 +1,11 @@
 # 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
-Breve descripción del proyecto:
-
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Este es un script en el que, en base a un código provisto por la cátedra donde se nos proporcionan la clase carta y dos tests, implementamos una clase Mazo para ser utilizada para el juego de cartas "Guerra", revisando que cumpla con los tests antes mencionados, utilizando para el mismo objetos de tipo carta.
 
 ---
 ## 🏗Arquitectura General
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
-
-Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
+El código donde se implementan las clases Mazo, Carta y JuegoGuerra se encuentran en la carpeta [modulos](./modulos) del proyecto.
 
 El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 
@@ -18,8 +14,7 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 
 1. **Python 3.x**
 2. **matplotlib** (`pip install matplotlib`)
-3. listar dependencias principales
-4. Dependencias listadas en requierements.txt
+3. Dependencias listadas en requierements.txt
 
 ---
 ## 🚀Cómo Ejecutar el Proyecto

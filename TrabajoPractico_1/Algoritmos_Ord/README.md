@@ -1,25 +1,22 @@
 # 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
-Breve descripción del proyecto:
-
-Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Este es un script en el que se trabajará con 3 algoritmos de ordenamiento: "Bubblesort", "Radixsort" y "Quicksort". Van a medirse los tiempos de ejecución de cada uno de ellos y comparar sus respectivas eficiencias.
 
 ---
 ## 🏗Arquitectura General
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
+Los algoritmos utilizados se encuentran en la carpeta [modules](./modules) del proyecto.
 
-Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
+Las gráficas y la tabla de los resultados están disponible en la carpeta [data](./data) del proyecto.
 
-El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
+El informe completo explicando la resolución del problema está disponible en la carpeta [docs](./docs) del proyecto.
 
 ---
 ## 📑Dependencias
 
 1. **Python 3.x**
 2. **matplotlib** (`pip install matplotlib`)
-3. listar dependencias principales
-4. Dependencias listadas en requierements.txt
+3. Dependencias listadas en requierements.txt
 
 ---
 ## 🚀Cómo Ejecutar el Proyecto

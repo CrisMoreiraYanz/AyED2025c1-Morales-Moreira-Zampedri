@@ -1,13 +1,11 @@
 # 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
-Breve descripción del proyecto:
-
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Este es un script en el que trabajamos implementando un TAD Lista Doblemente Enlazada, el cual puede almacenar elementos comparables (enteros,flotantes,strings...), y comparamos la relación entre el tiempo de ejecución y la cantidad de elementos para los métodos len, copiar e invertir que definimos para la clase ListaDobleEnlazada. 
 
 ---
 ## 🏗Arquitectura General
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
+El TAD Lista Doblemente Enlazada se encuentra en la carpeta [modulos](./modulos) del proyecto, y dentro de la misma se definen la clase Nodo y la clase ListaDobleEnlazada.
 
 Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
 
@@ -18,8 +16,7 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 
 1. **Python 3.x**
 2. **matplotlib** (`pip install matplotlib`)
-3. listar dependencias principales
-4. Dependencias listadas en requierements.txt
+3. Dependencias listadas en requierements.txt
 
 ---
 ## 🚀Cómo Ejecutar el Proyecto
