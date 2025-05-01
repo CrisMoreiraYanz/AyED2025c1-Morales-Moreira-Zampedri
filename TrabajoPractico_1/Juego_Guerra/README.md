@@ -7,6 +7,8 @@ Este es un script en el que, en base a un código provisto por la cátedra donde
 
 El código donde se implementan las clases Mazo, Carta y JuegoGuerra se encuentran en la carpeta [modulos](./modulos) del proyecto.
 
+Los tests proporcionados por la cátedra se encuentran en la carpeta [tests](./tests/) del proyecto.
+
 El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 
 ---
