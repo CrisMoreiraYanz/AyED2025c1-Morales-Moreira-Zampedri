@@ -99,6 +99,8 @@ class ListaDobleEnlazada:
         while nodo_actual:
             copia.agregar_al_final(nodo_actual.dato)
             nodo_actual = nodo_actual.siguiente
+        if copia.cabeza:
+            copia.cabeza.anterior=None
         return copia
 
     def invertir(self):
@@ -109,17 +111,31 @@ class ListaDobleEnlazada:
             nodo_actual = nodo_actual.anterior
         return self
     
+    # def concatenar(self, otra_lista):
+    #     if otra_lista.esta_vacia(): 
+    #         return self
+    #     if self.esta_vacia():
+    #         self.cabeza=otra_lista.cabeza
+    #         self.cola=otra_lista.cola 
+    #         if self.cabeza:
+    #             self.cabeza.anterior=None  
+    #         self.tamanio=len(otra_lista)
+    #         return self
+    #     else:
+    #         self.cola.siguiente = otra_lista.cabeza
+    #         otra_lista.cabeza.anterior = self.cola
+    #         self.cola = otra_lista.cola
+    #         self.tamanio += len(otra_lista)
+    #         return self
+
     def concatenar(self, otra_lista):
         if otra_lista.esta_vacia():
             return self
-        if self.esta_vacia():   
-            return otra_lista
-        else:
-            self.cola.siguiente = otra_lista.cabeza
-            otra_lista.cabeza.anterior = self.cola
-            self.cola = otra_lista.cola
-            self.tamanio += len(otra_lista)
-            return self
+        nodo_actual =otra_lista.cabeza
+        while nodo_actual:
+            self.agregar_al_final(nodo_actual.dato)
+            nodo_actual = nodo_actual.siguiente
+        return self
 
     def __add__(self, otra_lista):
         nueva_lista = self.copiar()
@@ -144,9 +160,9 @@ class ListaDobleEnlazada:
 if __name__ == "__main__":
     lista1=ListaDobleEnlazada()
     lista2=ListaDobleEnlazada()
-    for i in range(10):
+    for i in range(30):
         lista1.agregar_al_final(i)
-        lista2.agregar_al_final(i+10)
+        lista2.agregar_al_final(i+20)
         
     # for i in lista1:
     #     print(i, end=" ")
@@ -156,4 +172,6 @@ if __name__ == "__main__":
     for i in lista3:
         print(i, end=" ")
     # print(lista1.invertir())
+
+   
     

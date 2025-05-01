@@ -351,13 +351,13 @@ class Test_LDE(unittest.TestCase):
 
         # Recorro de adelante para atras
         nodo = lista.cabeza
-        #print("aca esta el nodo anterios", nodo.anterior)
+        # print("aca esta el nodo anterior", nodo.anterior)
         counter = 0
         elementos = []
         
         self.assertIsNone(nodo.anterior,
                           "El elemento anterior a la cabeza de la lista debe ser None")
-        
+        # print("aca esta el nodo anterior", nodo.anterior)
         while nodo is not None:
             counter += 1
             elementos.append(nodo.dato)
@@ -379,36 +379,36 @@ class Test_LDE(unittest.TestCase):
                              "a que si la recorremos de adelante para atrás.")
             nodo = nodo.anterior
 
-    # def test_metodo_concatenar(self):
-    #     """
-    #     Verifico que funcione bien la concatenacion de listas mediante el metodo
-    #     concatenar. El metodo modifica la instancia que realiza la invocacion.
-    #     """
-    #     lista_concatenada1 = self.lde_3.copiar()
-    #     lista_concatenada1.concatenar(self.lde_2)
+    def test_metodo_concatenar(self):
+        """
+        Verifico que funcione bien la concatenacion de listas mediante el metodo
+        concatenar. El metodo modifica la instancia que realiza la invocacion.
+        """
+        lista_concatenada1 = self.lde_3.copiar()
+        lista_concatenada1.concatenar(self.lde_2)
 
-    #     # Compruebo que las listas originales esten intactas
-    #     self.recorrer_lista(self.lde_3)
-    #     self.recorrer_lista(self.lde_2)
+        # Compruebo que las listas originales esten intactas
+        self.recorrer_lista(self.lde_3)
+        self.recorrer_lista(self.lde_2)
 
-    #     # Compruebo que la lista concatenada este bien enlazada
-    #     self.recorrer_lista(lista_concatenada1)
+        # Compruebo que la lista concatenada este bien enlazada
+        self.recorrer_lista(lista_concatenada1)
 
-    #     # Verifico que los elementos resulten efectivamente de la concatenacion
-    #     # en orden de la lista lde_3 con lde_2
-    #     nodo_original = self.lde_3.cabeza
-    #     nodo_concat = lista_concatenada1.cabeza
-    #     while nodo_original is not None:
-    #         self.assertEqual(nodo_original.dato, nodo_concat.dato,
-    #                          "No coinciden los nodos de la lista 1 con la lista concatenada")
-    #         nodo_original = nodo_original.siguiente
-    #         nodo_concat = nodo_concat.siguiente
-    #     nodo_original = self.lde_2.cabeza
-    #     while nodo_original is not None:
-    #         self.assertEqual(nodo_original.dato, nodo_concat.dato,
-    #                          "No coinciden los nodos de la lista 2 con la lista concatenada")
-    #         nodo_original = nodo_original.siguiente
-    #         nodo_concat = nodo_concat.siguiente
+        # Verifico que los elementos resulten efectivamente de la concatenacion
+        # en orden de la lista lde_3 con lde_2
+        nodo_original = self.lde_3.cabeza
+        nodo_concat = lista_concatenada1.cabeza
+        while nodo_original is not None:
+            self.assertEqual(nodo_original.dato, nodo_concat.dato,
+                             "No coinciden los nodos de la lista 1 con la lista concatenada")
+            nodo_original = nodo_original.siguiente
+            nodo_concat = nodo_concat.siguiente
+        nodo_original = self.lde_2.cabeza
+        while nodo_original is not None:
+            self.assertEqual(nodo_original.dato, nodo_concat.dato,
+                             "No coinciden los nodos de la lista 2 con la lista concatenada")
+            nodo_original = nodo_original.siguiente
+            nodo_concat = nodo_concat.siguiente
 
     def test_operador_add(self):
         """
@@ -424,7 +424,7 @@ class Test_LDE(unittest.TestCase):
         # Compruebo que las listas originales esten intactas
         self.recorrer_lista(self.lde_3)
         self.recorrer_lista(self.lde_2)
-
+        # print("el nodo anterior despues de recorrer la lista", nodo_concat.anterior)
         # Compruebo que la lista concatenada este bien enlazada
         self.recorrer_lista(lista_concatenada1)
 
