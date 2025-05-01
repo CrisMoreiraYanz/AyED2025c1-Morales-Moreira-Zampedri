@@ -6,30 +6,32 @@ class DequeEmptyError(Exception):
     pass
 
 class Mazo:
-    def __init__(self):
+    def _init_(self):
         self.cartas = ListaDobleEnlazada()
 
-    def agregar_carta_al_final(self, carta):
-        self.cartas.append(carta)
+    def poner_carta_abajo(self, carta):
+        self.cartas.agregar_al_final(carta)
 
-    def agregar_carta_al_inicio(self, carta):
-        self.cartas.prepend(carta)
+    def poner_carta_arriba(self, carta):
+        self.cartas.agregar_al_inicio(carta)
 
-    def extraer_carta_del_final(self):
+    def sacar_carta_abajo(self):
         if self.cartas.esta_vacia():
             raise DequeEmptyError("El mazo está vacío. No se puede extraer una carta del final.")
-        return self.cartas.pop()
+        return self.cartas.extraer(-1)
 
-    def extraer_carta_del_inicio(self):
+    def sacar_carta_arriba(self, mostrar=False):
         if self.cartas.esta_vacia():
             raise DequeEmptyError("El mazo está vacío. No se puede extraer una carta del inicio.")
-        return self.cartas.popleft()
+        carta = self.cartas.extraer(0)
+        return carta
+            
 
-    def __len__(self):
+    def _len_(self):
         """Devuelve la cantidad de cartas en el mazo."""
         return len(self.cartas)
 
-    def __str__(self):
+    def _str_(self):
         """Devuelve una representación en cadena del mazo."""
         return " -> ".join(str(carta) for carta in self.cartas)
 
