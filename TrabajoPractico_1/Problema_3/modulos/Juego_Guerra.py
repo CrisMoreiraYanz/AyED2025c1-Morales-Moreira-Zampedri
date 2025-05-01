@@ -1,7 +1,7 @@
 #código proporcionado por la cátedra
 #algoritomo del juego guerra
-from mazo import Mazo, DequeEmptyError
-from carta import Carta
+from modulos.mazo import Mazo, DequeEmptyError
+from modulos.carta import Carta
 import random
 
 N_TURNOS = 10000

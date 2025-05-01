@@ -1,5 +1,5 @@
 #test del juego guerra propocionado por la cátedra
-from modulos.Juego_Guerra import JuegoGuerra
+from Problema_3.modulos.Juego_Guerra import JuegoGuerra
 import unittest
 
 class TestJuegoGuerra(unittest.TestCase):
