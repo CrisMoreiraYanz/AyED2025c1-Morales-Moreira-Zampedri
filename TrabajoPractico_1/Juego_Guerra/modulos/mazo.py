@@ -6,7 +6,7 @@ class DequeEmptyError(Exception):
     pass
 
 class Mazo:
-    def _init_(self):
+    def __init__(self):
         self.cartas = ListaDobleEnlazada()
 
     def poner_carta_abajo(self, carta):
@@ -26,12 +26,11 @@ class Mazo:
         carta = self.cartas.extraer(0)
         return carta
             
-
-    def _len_(self):
+    def __len__(self):
         """Devuelve la cantidad de cartas en el mazo."""
         return len(self.cartas)
 
-    def _str_(self):
+    def __str__(self):
         """Devuelve una representación en cadena del mazo."""
         return " -> ".join(str(carta) for carta in self.cartas)
 
