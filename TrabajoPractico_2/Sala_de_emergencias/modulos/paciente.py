@@ -41,12 +41,12 @@ class Paciente:
         cad += str(self.__riesgo) + '-' + self.__descripcion
         return cad
 
-if __name__ == "__main__":
-    # Ejemplo de uso
-    paciente = Paciente()
-    print(paciente)
-    print("Nombre:", paciente.get_nombre())
-    print("Apellido:", paciente.get_apellido())
-    print("Riesgo:", paciente.get_riesgo())
-    print("Descripción de riesgo:", paciente.get_descripcion_riesgo())
-    print("Tiempo de llegada:", paciente.get_tiempo_llegada())
+# if __name__ == "__main__":
+#     # Ejemplo de uso
+#     paciente = Paciente()
+#     print(paciente)
+#     print("Nombre:", paciente.get_nombre())
+#     print("Apellido:", paciente.get_apellido())
+#     print("Riesgo:", paciente.get_riesgo())
+#     print("Descripción de riesgo:", paciente.get_descripcion_riesgo())
+#     print("Tiempo de llegada:", paciente.get_tiempo_llegada())

@@ -7,3 +7,4 @@ class prioridad:
         self.pacientes = monticulobinario()
         
 
+
