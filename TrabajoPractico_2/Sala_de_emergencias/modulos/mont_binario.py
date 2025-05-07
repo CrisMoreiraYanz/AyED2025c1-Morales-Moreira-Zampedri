@@ -49,7 +49,7 @@ class monticulobinario:
          self.infiltrar_abajo(i)
          i -= 1   
 
-if __name__="__main__":
+if __name__=="__main__":
     monticulo = monticulobinario()
     lista = [5, 3, 8, 1, 4, 7, 2, 6]
     monticulo.construir_monticulo(lista)
