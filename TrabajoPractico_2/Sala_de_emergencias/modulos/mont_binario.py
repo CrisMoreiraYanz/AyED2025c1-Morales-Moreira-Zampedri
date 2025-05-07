@@ -4,12 +4,12 @@ class monticulobinario:
         self.tamanio = 0
         
     def infiltrar_arriba(self,valor):
-        while i//2 > 0:
-          if self.lista_monticulo[i] < self.lista_monticulo[i//2]:
-            tmp=self.lista_monticulo[i//2]
-            self.lista_monticulo[i//2]=self.lista_monticulo[i]
-            self.lista_monticulo[i]=tmp
-          i=i//2
+        while valor//2 > 0:
+          if self.lista_monticulo[valor] < self.lista_monticulo[valor//2]:
+            tmp=self.lista_monticulo[valor//2]
+            self.lista_monticulo[valor//2]=self.lista_monticulo[valor]
+            self.lista_monticulo[valor]=tmp
+          valor=valor//2
     def insertar(self,valor):
        self.lista_monticulo.append(valor)
        self.tamanio+=1
@@ -25,13 +25,13 @@ class monticulobinario:
              return valor * 2 + 1
         
     def infiltrar_abajo(self,valor):
-       while (i * 2) <= self.tamanio:
-           mc = self.hijo_min(i)
-           if self.lista_monticulo[i] > self.lista_monticulo[mc]:
-               tmp = self.lista_monticulo[i]
-               self.lista_monticulo[i] = self.lista_monticulo[mc]
-               self.lista_monticulo[mc] = tmp
-       i = mc      
+       while (valor * 2) <= self.tamanio:
+           hm = self.hijo_min(valor)
+           if self.lista_monticulo[valor] > self.lista_monticulo[hm]:
+               tmp = self.lista_monticulo[valor]
+               self.lista_monticulo[valor] = self.lista_monticulo[hm]
+               self.lista_monticulo[hm] = tmp
+       valor = hm      
 
     def extraer_minimo(self):
        ret_val = self.lista_monticulo[1]
@@ -48,4 +48,10 @@ class monticulobinario:
        while (i > 0):
          self.infiltrar_abajo(i)
          i -= 1   
-            
+
+
+if __name__ == "__main__":
+    monticulo = monticulobinario()
+    lista = [5, 3, 8, 1, 4, 7, 2, 6]
+    monticulo.construir_monticulo(lista)
+    print("Montículo binario construido:", monticulo.lista_monticulo[1:])
