@@ -35,7 +35,5 @@ class Paciente:
         cad += self.__apellido + '\t -> '
         cad += str(self.__riesgo) + '-' + self.__descripcion
         return cad
-        
-        
-        
-        
+
+    
