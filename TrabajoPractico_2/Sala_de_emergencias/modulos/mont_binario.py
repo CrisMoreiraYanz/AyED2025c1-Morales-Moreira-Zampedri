@@ -2,7 +2,10 @@ class monticulobinario:
     def __init__(self):
         self.lista_monticulo = [None]
         self.tamanio = 0
-        
+
+    def tamanio_monticulo(self):
+        return self.tamanio
+
     def infiltrar_arriba(self,valor):
         while valor//2 > 0:
           if self.lista_monticulo[valor] < self.lista_monticulo[valor//2]:
@@ -49,6 +52,10 @@ class monticulobinario:
        while (i > 0):
          self.infiltrar_abajo(i)
          i -= 1   
+         
+    def __iter__(self):
+         for i in range(1, self.tamanio + 1):
+              yield self.lista_monticulo[i]   
         
 
 # if __name__== "__main__":

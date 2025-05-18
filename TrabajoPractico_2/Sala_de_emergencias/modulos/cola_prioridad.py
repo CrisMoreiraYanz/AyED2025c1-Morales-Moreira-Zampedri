@@ -4,7 +4,8 @@ from modulos.paciente import Paciente
 class prioridad:
 
     def __init__(self):
-        self.pacientes = monticulobinario()
+        self.cola_de_espera = monticulobinario()
         
+
 
 
