@@ -40,6 +40,20 @@ class Paciente:
         cad += self.__apellido + '\t -> '
         cad += str(self.__riesgo) + '-' + self.__descripcion
         return cad
+    
+    def __eq__(self, other):
+        if not isinstance(other, Paciente):
+            return NotImplemented
+        return (self.__riesgo, self.__tiempo_llegada) == (other.__riesgo, other.__tiempo_llegada)
+
+    def __lt__(self, other):
+        if not isinstance(other, Paciente):
+            return NotImplemented
+        if self.__riesgo != other.__riesgo:
+            return self.__riesgo < other.__riesgo
+        return self.__tiempo_llegada < other.__tiempo_llegada
+
+
 
 # if __name__ == "__main__":
 #     # Ejemplo de uso
