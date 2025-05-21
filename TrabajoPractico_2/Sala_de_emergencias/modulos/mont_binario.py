@@ -58,17 +58,17 @@ class monticulobinario:
               yield self.lista_monticulo[i]   
         
 
-# if __name__== "__main__":
-#    monticulo = monticulobinario()
-#    lista = [5, 3, 8, 1, 4, 7, 2, 6]
-#    monticulo.construir_monticulo(lista)
-#    print("Montículo binario construido:", monticulo.lista_monticulo[1:])
+if __name__== "__main__":
+   monticulo = monticulobinario()
+   lista = [5, 3, 8, 1, 4, 7, 2, 6]
+   monticulo.construir_monticulo(lista)
+   print("Montículo binario construido:", monticulo.lista_monticulo[1:])
     
-#    monticulo.insertar(0)
-#    print("Después de insertar 0:", monticulo.lista_monticulo[1:])
+   monticulo.insertar(0)
+   print("Después de insertar 0:", monticulo.lista_monticulo[1:])
     
-#    min_val = monticulo.extraer_minimo()
-#    print("Valor mínimo extraído:", min_val)
-#    print("Después de extraer el mínimo:", monticulo.lista_monticulo[1:])
+   min_val = monticulo.extraer_minimo()
+   print("Valor mínimo extraído:", min_val)
+   print("Después de extraer el mínimo:", monticulo.lista_monticulo[1:])
 
-#    print ("Fin del programa")
+   print ("Fin del programa")
