@@ -1,4 +1,3 @@
-# archivo: modulos/cola_prioridad.py
 from modulos.mont_binario import monticulobinario
 
 class ColaDePrioridad:
