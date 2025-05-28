@@ -57,24 +57,24 @@ class Temperatura:
     
     def __str__(self):
         temperaturas = self.arbol.inorden()
-        return "\n".join([f"{fecha}: {temperatura} ºC" for fecha, temperatura in temperaturas])
+        return (2*"\n ").join([f"{fecha}: {temperatura} ºC" for fecha, temperatura in temperaturas])
 
-# if __name__ == "__main__":
-#         temp_db = Temperatura()
-#         temp_db.guardar_temperatura(25, "01/01/2023")
-#         temp_db.guardar_temperatura(30, "02/01/2023")
-#         temp_db.guardar_temperatura(20, "03/01/2023")
-#         temp_db.guardar_temperatura(15, "04/01/2023")
-#         temp_db.guardar_temperatura(35, "05/01/2023")
-#         temp_db.guardar_temperatura(28, "06/01/2023")
-#         temp_db.guardar_temperatura(22, "07/01/2023")
-#         print("temperaturas del 1 al 3",temp_db.devolver_temperaturas("01/01/2023", "03/01/2023"))
-#         print("temperatura del 2",temp_db.devolver_temperatura("02/01/2023"))
-#         print("temperatura minima",temp_db.min_temp_rango("01/01/2023", "05/01/2023"))
-#         print("temperatura maxima",temp_db.max_temp_rango("01/01/2023", "03/01/2023"))
-#         print("extremos",temp_db.temp_extremos_rango("01/01/2023", "07/01/2023"))
-#         temp_db.borrar_temperatura("02/01/2023")
-#         print(temp_db.cantidad_muestras())
-#         print("Arbol despues del inorden",temp_db)
+if __name__ == "__main__":
+        temp_db = Temperatura()
+        temp_db.guardar_temperatura(25, "01/01/2023")
+        temp_db.guardar_temperatura(30, "02/01/2023")
+        temp_db.guardar_temperatura(20, "03/01/2023")
+        temp_db.guardar_temperatura(15, "04/01/2023")
+        temp_db.guardar_temperatura(35, "05/01/2023")
+        temp_db.guardar_temperatura(28, "06/01/2023")
+        temp_db.guardar_temperatura(22, "07/01/2023")
+        print("\nTemperaturas del 01/01/2023 al 03/01/2023:",temp_db.devolver_temperaturas("01/01/2023", "03/01/2023"))
+        print("\nTemperatura del 02/01/2023:",temp_db.devolver_temperatura("02/01/2023"))
+        print("\nTemperatura mínima:",temp_db.min_temp_rango("01/01/2023", "05/01/2023"))
+        print("\nTemperatura máxima:",temp_db.max_temp_rango("01/01/2023", "03/01/2023"))
+        print("\nValores extremos de temperatura:",temp_db.temp_extremos_rango("01/01/2023", "07/01/2023"))
+        temp_db.borrar_temperatura("02/01/2023")
+        print("\nCantidad de muestras tomadas:",temp_db.cantidad_muestras())
+        print("\nÁrbol después del inorden:",temp_db)
         
        
