@@ -93,12 +93,30 @@ class AVLTree:
             nodo = nodo.hijoIzquierdo
         return nodo
 
+    def _encontrarMaximo(self, nodo):
+        while nodo.hijoDerecho is not None:
+            nodo = nodo.hijoDerecho
+        return nodo
+    
     def inorden(self):
         return self._inorden(self.raiz)
 
     def _inorden(self, nodo):
         return self._inorden(nodo.hijoIzquierdo) + [(nodo.clave, nodo.valor)] + self._inorden(nodo.hijoDerecho) if nodo else []
 
+    def buscar(self, clave, valor):
+        return self._buscar(self.raiz, clave, valor)
+    
+    def _buscar(self, nodo, clave, valor):
+        if nodo is None:
+            return None
+        if nodo.clave == clave:
+            return nodo.valor
+        elif clave < nodo.clave:
+            return self._buscar(nodo.hijoIzquierdo, clave, valor)
+        else:
+            return self._buscar(nodo.hijoDerecho, clave, valor)
+    
 if __name__=="__main__":
     arbol = AVLTree()
     arbol.insertar(10, "A")
