@@ -53,4 +53,6 @@ if __name__ == "__main__":
     print(f"\nDistancia total recorrida por todas las palomas: {suma_total} leguas")    
 
     #Exportar el grafo a Graphviz para verificar el árbol de expansión mínima
+    #Mas que nada para ver que todas las aldeas están conectadas, que no se cree ningún ciclo,
+    #Que la distancia total esté bien y que se parta desde Peligros
     ExportarGraphviz(grafo, "mst.dot")      
