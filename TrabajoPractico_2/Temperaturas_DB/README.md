@@ -1,13 +1,11 @@
 # 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
-explicacion generica etc etc
+Este es un script en el que, recibiendo unas mediciones de una temperatura en °C en un tiempo determinado, se utiliza un árbol AVL para almacenarlas, incluyendo una serie de funciones propuestas por la cátedra.
 
 ---
 ## 🏗Arquitectura General
 
-Los algoritmos utilizados se encuentran en la carpeta [modules](./modules) del proyecto.
-
-Las gráficas y la tabla de los resultados están disponible en la carpeta [data](./data) del proyecto.
+Los algoritmos utilizados se encuentran en la carpeta [modules](./modules) del proyecto, siendo [Temperaturas_DB](./modules/Temperaturas_DB.py) el archivo donde se simula la situación descripta anteriormente.
 
 El informe completo explicando la resolución del problema está disponible en la carpeta [docs](./docs) del proyecto.
 

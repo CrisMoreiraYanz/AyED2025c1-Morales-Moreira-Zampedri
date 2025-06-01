@@ -1,13 +1,13 @@
 # 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
-explicacion generica etc etc
+Este es un script en el que, en base a una simulación de un triaje provisto por la cátedra, se implementa un cola de prioridad para que siempre se atienda al paciente con nivel de riesgo más complicado, tomando el tiempo de llegada como segundo criterio
 
 ---
 ## 🏗Arquitectura General
 
 Los algoritmos utilizados se encuentran en la carpeta [modules](./modules) del proyecto.
 
-Las gráficas y la tabla de los resultados están disponible en la carpeta [data](./data) del proyecto.
+La simulación de la sala de emergencias se encuentra en [main](main.py)
 
 El informe completo explicando la resolución del problema está disponible en la carpeta [docs](./docs) del proyecto.
 
@@ -15,8 +15,7 @@ El informe completo explicando la resolución del problema está disponible en l
 ## 📑Dependencias
 
 1. **Python 3.x**
-2. **matplotlib** (`pip install matplotlib`)
-3. Dependencias listadas en requierements.txt
+2. Dependencias listadas en requierements.txt
 
 ---
 ## 🚀Cómo Ejecutar el Proyecto

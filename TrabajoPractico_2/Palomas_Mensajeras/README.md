@@ -1,13 +1,15 @@
 # 🐍Aplicaciones TADs, Moreira, Morales, Zampedri
 
-explicacion generica etc etc
+Este es un script en el que se trabajará con el archivo 'aldeas.txt', y se utilizará el algoritmo prim sobre un grafo con todas las rutas proporcionadas en dicho archivo para encontrar la manera más eficiente de enviar un mensaje y que cada aldea lo reciba una sola vez
 
 ---
 ## 🏗Arquitectura General
 
-Los algoritmos utilizados se encuentran en la carpeta [modules](./modules) del proyecto.
+La clase grafo, las otras estructuras que utiliz de manera interna, y el algoritmo prim, se encuentran en la carpeta [modulos](./modulos) del proyecto.
 
-Las gráficas y la tabla de los resultados están disponible en la carpeta [data](./data) del proyecto.
+La simulación del envío del mensaje se encuentra en [main](main.py).
+
+El archivo 'aldeas.txt' y una representación gráfica del árbol de expansión mínima (Hecho en el sitio web Graphviz) están disponible en la carpeta [data](./data) del proyecto.
 
 El informe completo explicando la resolución del problema está disponible en la carpeta [docs](./docs) del proyecto.
 
