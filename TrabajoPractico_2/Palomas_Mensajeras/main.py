@@ -1,5 +1,6 @@
 from modulos.grafo import Grafo
 from modulos.prim import prim
+from modulos.exportar import ExportarGraphviz
 def cargar_grafo(nombre_archivo):
     G = Grafo()
     with open("data/aldeas.txt") as f:
@@ -49,4 +50,7 @@ if __name__ == "__main__":
         if v.predecesor:
             suma_total += v.obtener_ponderacion(v.predecesor)
 
-    print(f"\nDistancia total recorrida por todas las palomas: {suma_total} leguas")          
+    print(f"\nDistancia total recorrida por todas las palomas: {suma_total} leguas")    
+
+    #Exportar el grafo a Graphviz para verificar el árbol de expansión mínima
+    ExportarGraphviz(grafo, "mst.dot")      

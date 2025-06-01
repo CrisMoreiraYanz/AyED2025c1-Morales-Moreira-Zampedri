@@ -1,0 +1,23 @@
+graph MST {
+    "Peligros" -- "Lomaseca" [label=7];
+    "Lomaseca" -- "Pepino" [label=3];
+    "Lomaseca" -- "Los Infiernos" [label=2];
+    "Lomaseca" -- "El Cerrillo" [label=5];
+    "El Cerrillo" -- "Malcocinado" [label=6];
+    "Humilladero" -- "Hortijos" [label=5];
+    "Torralta" -- "Humilladero" [label=9];
+    "Torralta" -- "Villaviciosa" [label=8];
+    "Buenas Noches" -- "Cebolla" [label=2];
+    "Silla" -- "Torralta" [label=4];
+    "La Aparecida" -- "Silla" [label=5];
+    "Los Infiernos" -- "La Pera" [label=3];
+    "La Pera" -- "Espera" [label=3];
+    "Diosleguarde" -- "Elciego" [label=7];
+    "Malcocinado" -- "Diosleguarde" [label=9];
+    "Elciego" -- "MelÃ³n" [label=3];
+    "Malcocinado" -- "Consuegra" [label=1];
+    "Malcocinado" -- "Aceituna" [label=2];
+    "Peligros" -- "La Aparecida" [label=5];
+    "Cebolla" -- "Pancrudo" [label=2];
+    "La Aparecida" -- "Buenas Noches" [label=3];
+}
