@@ -55,6 +55,9 @@ class Temperatura:
     def cantidad_muestras(self): 
         return len(self.arbol.inorden())
     
+    def devolver_raiz(self):
+        return self.arbol.devolver_raiz()
+    
     def __str__(self):
         temperaturas = self.arbol.inorden()
         return (2*"\n ").join([f"{fecha}: {temperatura} ºC" for fecha, temperatura in temperaturas])
@@ -68,13 +71,21 @@ if __name__ == "__main__":
         temp_db.guardar_temperatura(35, "05/01/2023")
         temp_db.guardar_temperatura(28, "06/01/2023")
         temp_db.guardar_temperatura(22, "07/01/2023")
-        print("\nTemperaturas del 01/01/2023 al 03/01/2023:",temp_db.devolver_temperaturas("01/01/2023", "03/01/2023"))
+        print("\nTemperaturas del 01/01/2023 al 03/01/2023:",temp_db.devolver_temperaturas("01/01/2023", "07/01/2023"))
         print("\nTemperatura del 02/01/2023:",temp_db.devolver_temperatura("02/01/2023"))
-        print("\nTemperatura mínima:",temp_db.min_temp_rango("01/01/2023", "05/01/2023"))
-        print("\nTemperatura máxima:",temp_db.max_temp_rango("01/01/2023", "03/01/2023"))
+        print("\nTemperatura mínima:",temp_db.min_temp_rango("01/01/2023", "07/01/2023"))
+        print("\nTemperatura máxima:",temp_db.max_temp_rango("01/01/2023", "07/01/2023"))
         print("\nValores extremos de temperatura:",temp_db.temp_extremos_rango("01/01/2023", "07/01/2023"))
         temp_db.borrar_temperatura("02/01/2023")
         print("\nCantidad de muestras tomadas:",temp_db.cantidad_muestras())
-        print("\nÁrbol después del inorden:",temp_db)
+        temp_db.guardar_temperatura(30, "02/01/2023")
+        print("\nRaiz del arbol",temp_db.devolver_raiz())
+        temp_db.borrar_temperatura("05/01/2023")
+        print("\nÁrbol después de boorrar 05/01/2023:\n",temp_db)    
+        temp_db.borrar_temperatura("04/01/2023")
+        print("\nÁrbol después de borrar 04/01/2023:\n", temp_db)
+        temp_db.guardar_temperatura(25, "05/01/2023")
+        print("\nÁrbol después de volver a insertar 05/01/2023:\n", temp_db)
+        print("\nRaiz del arbol",temp_db.devolver_raiz())
         
        

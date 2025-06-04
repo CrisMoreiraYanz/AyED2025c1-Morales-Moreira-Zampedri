@@ -116,6 +116,9 @@ class AVLTree:
             return self._buscar(nodo.hijoIzquierdo, clave, valor)
         else:
             return self._buscar(nodo.hijoDerecho, clave, valor)
+        
+    def devolver_raiz (self):
+        return self.raiz.clave if self.raiz else None
     
 if __name__=="__main__":
     arbol = AVLTree()
