@@ -79,13 +79,13 @@ if __name__ == "__main__":
         temp_db.borrar_temperatura("02/01/2023")
         print("\nCantidad de muestras tomadas:",temp_db.cantidad_muestras())
         temp_db.guardar_temperatura(30, "02/01/2023")
-        print("\nRaiz del arbol",temp_db.devolver_raiz())
+        print("\nRaiz del arbol:",temp_db.devolver_raiz())
         temp_db.borrar_temperatura("05/01/2023")
         print("\nÁrbol después de boorrar 05/01/2023:\n",temp_db)    
         temp_db.borrar_temperatura("04/01/2023")
         print("\nÁrbol después de borrar 04/01/2023:\n", temp_db)
         temp_db.guardar_temperatura(25, "05/01/2023")
         print("\nÁrbol después de volver a insertar 05/01/2023:\n", temp_db)
-        print("\nRaiz del arbol",temp_db.devolver_raiz())
+        print("\nRaiz del arbol:",temp_db.devolver_raiz())
         
        
