@@ -15,6 +15,7 @@ class Temperatura:
     def devolver_temperatura(self, fecha): 
         return self.arbol.buscar(fecha, None) 
 
+    #devuelve un listado de las temperaturas en un rango, ordenado por fechas.
     def temperaturas_en_rango(self, fecha1, fecha2):
         temperaturas = self.arbol.inorden()
         return [temperatura for fecha, temperatura in temperaturas if fecha1 <= fecha <= fecha2]  
@@ -55,6 +56,7 @@ class Temperatura:
     def cantidad_muestras(self): 
         return len(self.arbol.inorden())
     
+    #Devuelve la raíz del árbol.
     def devolver_raiz(self):
         return self.arbol.devolver_raiz()
     
@@ -62,6 +64,7 @@ class Temperatura:
         temperaturas = self.arbol.inorden()
         return (2*"\n ").join([f"{fecha}: {temperatura} ºC" for fecha, temperatura in temperaturas])
 
+# Prueba de funcionamiento de la clase Temperatura
 if __name__ == "__main__":
         temp_db = Temperatura()
         temp_db.guardar_temperatura(25, "01/01/2023")
