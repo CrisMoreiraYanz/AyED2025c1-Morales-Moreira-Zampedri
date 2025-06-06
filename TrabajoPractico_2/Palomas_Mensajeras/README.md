@@ -5,7 +5,7 @@ Este es un script en el que se trabajará con el archivo 'aldeas.txt', y se util
 ---
 ## 🏗Arquitectura General
 
-La clase grafo, las otras estructuras que utiliz de manera interna, y el algoritmo prim, se encuentran en la carpeta [modulos](./modulos) del proyecto.
+La clase grafo, las otras estructuras que utiliza de manera interna, y el algoritmo prim, se encuentran en la carpeta [modulos](./modulos) del proyecto.
 
 La simulación del envío del mensaje se encuentra en [main](main.py).
 
